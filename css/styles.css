@@ -101,7 +101,11 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 30px;
+    width: 100%;
+    position: absolute; 
+    top: 100px;           
   }
+
   .boton-volver:hover {
     background-color: var(--col-frio-intenso);;
   }
