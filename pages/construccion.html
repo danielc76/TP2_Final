@@ -27,11 +27,10 @@
                         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Tips.html">Tips</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Tips.html">Tips</a></li>
                         <li class="nav-item"><a class="nav-link" href="bolsa_empleo.html">Empleos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="registrate.html">Registrate</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="iniciar.html">Logueate</a></li>
-
+                        <li class="nav-item"><a class="nav-link" href="registrate.html">Regístrate</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iniciar.html">Loguéate</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,32 +38,27 @@
     </header>
 
     <main>
-        <!-- Sección de Inicio de Sesión -->
-        <section id="iniciar-sesion" class="seccion">
-            <h1 class="texto-destacado">Iniciar Sesión</h1>
-            <form action="#" method="post" class="formulario-inicio">
-                <!-- Campo Mail -->
-                <label for="mail">Mail:</label>
-                <input type="email" id="mail" name="mail" required placeholder="Ingresa tu correo electrónico">
 
-                <!-- Campo Contraseña -->
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" required placeholder="Ingresa tu contraseña">
+        <button class="boton-volver" onclick="volverAtras()">Volver</button>
 
-                <!-- Botón de envío -->
-                <button type="submit">Iniciar Sesión</button>
+        <script>
+            // Función para volver a la página anterior
+            function volverAtras() {
+                window.history.back();
+            }
+        </script>
 
-                <!-- Enlace a "Registrate" -->
-                <p>¿No tienes una cuenta? <a href="../pages/registrate.html">Regístrate aquí</a>.</p>
-            </form>
-        </section>
+        <img class="imagen-destacada" src="../assets/img/construccion.png" alt="En construcción" onclick="volverAtras()">
+
     </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="bg-dark text-white p-3">
-            <p class="text-center">© 2025 Emprenred    Instagram @emprenred</p>
+        <div class="bg-dark text-white p-3 text-center">
+            © 2025 EmprenRed | Instagram @emprenred
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

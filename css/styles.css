@@ -1,32 +1,43 @@
 /* VARIABLES #################################################*/
 :root {
-    --col-bkg-destacado: #F2B705;
-    --col-menu-act-bkg: #013b46; /*590202*/
     --col-fondo: #8eceb9;
     --col-claro: rgb(231, 240, 238);
-    --col-submenu-bkg: #3299D9;
-    --col-submenu-interior-bkg: #3BACD9;
-    --col-submenu-txt-foco: #d95904;
-    --col-submenu-txt: #463914;
-    --col-submenu-bkg-foco: #29e0c8;
+    --col-calido-intenso: #d95904;
+    --col-calido-suave: #F2B705;
+    --col-frio-intenso: #013b46;  
+    --col-frio-suave1: #3299D9;
+    --col-frio-suave2: #3BACD9;
+    --col-frio-suave3: #29e0c8;
 }
 
 /* FONTS #################################################*/
 .letra-comun {
-    color: var(--col-menu-act-bkg); /* Texto en blanco */
+    color: var(--col-frio-intenso);
     font-weight: bold; /* Texto en negrita */
     padding: 10px 20px; /* Espaciado interno */
-    text-align:justify; /* Centrado del texto */
+    text-align: left; /* Centrado del texto */
     font-size: 1.2rem; 
     transition: transform 0.3s ease-in-out; /* Efecto de animación */
 }
 
-
 .letra-moderna {
     font-family: "Pacifico", cursive;
-    background-color: var(--col-submenu-bkg); /* Color de fondo destacado */
-    color: var(--col-claro); /* Texto en blanco */
-    font-weight: bold; /* Texto en negrita */
+    background-color: var(--col-frio-suave1); 
+    color: var(--col-claro); 
+    font-weight: bold;  
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrado del texto */
+    margin: 20px 0; /* Espaciado alrededor */
+    font-size: 1.3rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    transition: transform 0.3s ease-in-out; /* Efecto de animación */
+}
+
+.texto-destacado {
+    background-color: var(--col-calido-suave);  
+    color: var(--col-claro);  
+    font-weight: bold;  
     padding: 10px 20px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     text-align: center; /* Centrado del texto */
@@ -36,54 +47,41 @@
     transition: transform 0.3s ease-in-out; /* Efecto de animación */
 }
 
-.texto-destacado {
-    background-color: var(--col-bkg-destacado); /* Color de fondo destacado */
-    color: var(--col-claro); /* Texto en blanco */
-    font-weight: bold; /* Texto en negrita */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Centrado del texto */
-    margin: 20px 0; /* Espaciado alrededor */
-    font-size: 1.8rem; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
-    transition: transform 0.3s ease-in-out; /* Efecto de animación */
-}
-
 .letra-moderna:hover {
     transform: scale(1.05); /* Aumento de tamaño al pasar el cursor */
-    background-color: #013b46; /* Cambio de color al hacer hover */
+    background-color: var(--col-frio-intenso); /* Cambio de color al hacer hover */
 }
 
 .texto-destacado:hover {
     transform: scale(1.05); /* Aumento de tamaño al pasar el cursor */
-    background-color: #013b46; /* Cambio de color al hacer hover */
+    background-color: var(--col-frio-intenso); /* Cambio de color al hacer hover */
 }
 
 .texto-ultra-destacado {
-    background-color: var(--col-submenu-txt-foco); /* Color de fondo destacado */
-    color: var(--col-claro); /* Texto en blanco */
+    background-color: var(--col-calido-intenso);  
+    color: var(--col-claro);  
     font-weight: bold; /* Texto en negrita */
     padding: 10px 20px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     text-align: center; /* Centrado del texto */
     margin: 20px 0; /* Espaciado alrededor */
-    font-size: 1.9rem; 
+    font-size: 1.6rem; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
     transition: transform 0.3s ease-in-out; /* Efecto de animación */
 }
 
 .texto-ultra-destacado:hover {
     transform: scale(1.05); /* Aumento de tamaño al pasar el cursor */
-    background-color: #013b46; /* Cambio de color al hacer hover */
+    background-color: var(--col-frio-intenso);; /* Cambio de color al hacer hover */
 }
 /* IMAGENES ##############################################*/
 
 
   /* Estilos para imágenes destacadas */
 .imagen-destacada {
-    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    max-width: 100%; /*que la imagen no sea más ancha que su contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Evita espacios no deseados debajo de la imagen */
+    display: block; /* Evitar espacios no deseados debajo de la imagen */
     margin: 20px auto; /* Centra la imagen y agrega un margen */
     transition: transform 0.3s ease; /* Transición suave para el efecto hover */
   }
@@ -91,6 +89,21 @@
   /* Efecto hover para ampliar la imagen */
   .imagen-destacada:hover {
     transform: scale(1.1); /* Amplía la imagen al 110% de su tamaño original */
+  }
+
+  /* BOTON ##############################################*/
+
+  .boton-volver {
+    padding: 10px 20px;
+    background-color:var(--col-frio-suave1);
+    color: var(--col-claro);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .boton-volver:hover {
+    background-color: var(--col-frio-intenso);;
   }
 
 
@@ -146,8 +159,8 @@ footer {
 }
 
 .nav-link.active {
-    background-color: var(--col-menu-act-bkg);
-    color: var(--col-bkg-destacado) !important;
+    background-color: var(--col-frio-intenso);
+    color: var(--col-calido-suave) !important;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -166,7 +179,7 @@ footer {
     left: 0;
     width: 250px;
     height: 100vh;
-    background-color: var(--col-submenu-bkg);
+    background-color: var(--col-frio-suave1);
     padding: 15px;
     overflow-y: auto;
 }
@@ -178,27 +191,27 @@ footer {
 }
 
 .submenu-lista-item {
-    background-color: var(--col-submenu-interior-bkg);
+    background-color: var(--col-frio-suave2);
     transition: font-size 0.4s ease, color 0.4s ease, background-color 0.4s ease;
 }
 
 .submenu-lista-item:hover {
-    background-color: var(--col-submenu-bkg-foco);
-    color: var(--col-submenu-txt-foco) !important;
+    background-color: var(--col-frio-suave3);
+    color: var(--col-calido-intenso) !important;
 }
  
 .submenu-lista-item a {
-    color: var(--col-submenu-txt) !important;
+    color: var(--col-frio-intenso) !important;
     text-decoration: none;
     font-weight: bold;
     display: block;
     padding: 10px;
-    transition: color 0.4s ease, font-size 0.4s ease;  /* Agregamos la transición de color */
+    transition: color 0.4s ease, font-size 0.4s ease;  /* Transición de color */
 }
 
 
 .submenu-lista-item a:hover {
-    color: var(--col-submenu-txt-foco) !important;
+    color: var(--col-calido-intenso) !important;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -257,7 +270,7 @@ form textarea {
 form button {
     width: 100%;
     padding: 10px;
-    background: var(--col-menu-act-bkg);
+    background: var(--col-frio-intenso);
     color: var(--col-claro);
     font-size: 1.1rem;
     border: none;
@@ -266,7 +279,7 @@ form button {
 }
 
 form button:hover {
-    background: darkred;
+    background: var(--col-frio-suave1);
 }
 
 /* GRID DE TARJETAS #################################################*/
@@ -311,26 +324,26 @@ form button:hover {
 
 .dropdown-menu {
     overflow-y: auto; /* Agrega scroll si hay muchas opciones */
-    background-color: var(--col-submenu-bkg); /* Fondo del menú */
-    border: 1px solid var(--col-submenu-txt); /* Borde del menú */
+    background-color: var(--col-frio-suave1);  
+    border: 1px solid var(--col-frio-intenso);  
 }
 
 .fixed-dropdown {
     position: fixed;
-    top: 80px; /* Ajustá según la altura de tu navbar */
-    left: 20px; /* Ajustá según tu diseño */
+    top: 80px; 
+    left: 20px;  
     z-index: 1050; /* Para que quede por encima de otros elementos */
 }
 
 .dropdown-item {
-    color: var(--col-submenu-txt) !important; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
+    color: var(--col-frio-intenso) !important;   
+    padding: 10px 20px;  
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 .dropdown-item:hover {
-    background-color: var(--col-submenu-bkg-foco); /* Fondo al hacer hover */
-    color: var(--col-submenu-txt-foco) !important; /* Color del texto al hacer hover */
+    background-color: var(--col-frio-suave3); /* Fondo al hacer hover */
+    color: var(--col-calido-intenso) !important; /* Color del texto al hacer hover */
 }
 
 /*  ################################################################################################################### 
